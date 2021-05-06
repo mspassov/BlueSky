@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(36, 36, 36);
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+}
+
+h1,
+h2 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar {
+  background: #00b4d8;
+  color: white;
+  height: 6rem;
+}
+
+.container {
+  /*Might need to change later */
+  width: 80%;
+  margin: 0 auto;
+  overflow: auto; /*Makes it so that there is no longer a top margin*/
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: white;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+a:hover {
+  border-bottom: 2px solid white;
+}
+
+.btn {
+  background: red;
+}
+
+.showcase h1,
+.showcase h2 {
+  font-weight: 500;
+}
