@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #00b4d8;
+  --text-color: rgb(36, 36, 36);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,7 +21,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgb(36, 36, 36);
+  color: var(--text-color);
 }
 
 h1,
@@ -34,16 +39,9 @@ img {
 }
 
 .navbar {
-  background: #00b4d8;
+  background: var(--primary-color);
   color: white;
   height: 6rem;
-}
-
-.container {
-  /*Might need to change later */
-  width: 80%;
-  margin: 0 auto;
-  overflow: auto; /*Makes it so that there is no longer a top margin*/
 }
 
 .navbar .flex {
@@ -74,7 +72,156 @@ a:hover {
   background: red;
 }
 
-.showcase h1,
 .showcase h2 {
+  font-weight: 400;
+}
+
+.showcase h1 {
+  font-size: 30px;
   font-weight: 500;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase {
+  background: var(--primary-color);
+  height: 22rem;
+  color: white;
+  position: relative;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background-color: white;
+  transform: skewY(-5deg);
+}
+
+.showcase-form {
+  position: relative;
+  top: 6.5rem;
+  height: 20rem;
+  width: 25rem;
+  justify-self: flex-end;
+  z-index: 100;
+}
+
+.showcase .grid {
+  overflow: visible;
+}
+
+.showcase .form-control {
+  margin: 25px 15px;
+}
+
+.showcase-form h2 {
+  margin: 25px 15px;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #009ad8;
+  width: 100%;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.stats {
+  padding-top: 150px;
+}
+
+.stats-heading {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Utility Classes */
+.container {
+  /*Might need to change later */
+  width: 80%;
+  margin: 0 auto;
+  overflow: auto; /*Makes it so that there is no longer a top margin*/
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my-2 {
+  margin: 1.5rem 0;
+}
+
+.my-3 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 3rem 0;
+}
+
+.my-5 {
+  margin: 4rem 0;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  margin: 10px;
+  padding: 20px;
+  color: rgb(53, 53, 53);
+}
+
+.showcase-form .btn {
+  margin: 5px 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.btn-outline {
+  border: 1px solid white;
+}
+
+.text-center {
+  text-align: center;
 }
