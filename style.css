@@ -48,12 +48,6 @@ img {
   justify-content: space-between;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
 .navbar ul {
   display: flex;
 }
@@ -140,6 +134,7 @@ a:hover {
 
 .stats {
   padding-top: 150px;
+  margin-bottom: 5rem;
 }
 
 .stats-heading {
@@ -149,6 +144,91 @@ a:hover {
   font-size: 18px;
 }
 
+.stats .grid h3 {
+  font-size: 30px;
+  margin-top: 1rem;
+}
+
+.stats .grid p {
+  font-size: 20px;
+}
+
+.cli h3 {
+  font-weight: 400;
+}
+
+.cli .grid {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.cli .grid img {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  width: 90%;
+  margin: auto;
+}
+
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+.cloud {
+  background: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 5rem;
+}
+
+.cloud a {
+  background: #0024d6;
+}
+
+.inner-content {
+  margin-bottom: 1.2rem;
+}
+
+.cloud img {
+  height: 15rem;
+  width: auto;
+  margin: auto;
+}
+
+.cloud h2 {
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.languages .card {
+  text-align: center;
+  height: 90%;
+}
+
+.languages .grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.languages h2 {
+  font-weight: 500;
+  margin-top: 4rem;
+}
+
+.languages .card:hover {
+  transform: translateY(-20px);
+}
+
+.footer {
+  background: #0024d6;
+  height: 5rem;
+  margin-top: 5rem;
+  color: white;
+}
+
+.footer p {
+  text-align: center;
+  padding-top: 2rem;
+}
+
 /* Utility Classes */
 .container {
   /*Might need to change later */
@@ -156,6 +236,12 @@ a:hover {
   margin: 0 auto;
   overflow: auto; /*Makes it so that there is no longer a top margin*/
 }
+
+.flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
 
 .grid {
   display: grid;
@@ -226,4 +312,60 @@ a:hover {
 
 .text-center {
   text-align: center;
+}
+
+/* Tablet sized screens */
+@media (max-width: 768px) {
+    .grid, 
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .languages .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .hero-section{
+        text-align: center;
+        margin: 40px 50px 0 50px;
+
+    }
+
+    .cli .grid img{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .showcase{
+        height: auto;
+    }
+
+    .showcase-form{
+        justify-self: center;
+    }
+
+    .languages .grid img{
+        width: 40%;
+    }
+
+
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .navbar {
+    height: 150px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar ul{
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+
 }
